@@ -1,0 +1,47 @@
+{
+  "name": "@yepwallet/web-sdk",
+  "version": "0.1.1",
+  "description": "YepWallet Web - TypeScript Browser SDK for TON blockchain",
+  "main": "build/esnext/index.js",
+  "types": "build/esnext/index.d.ts",
+  "exports": {
+    ".": "./build/esnext/index.js",
+    "./esnext/*": "./build/esnext/*",
+    "./cjs/*": "./build/cjs/*"
+  },
+  "scripts": {
+    "build": "tsc; tsc --module commonjs --outDir build/cjs",
+    "deploy": "npm publish --access public"
+  },
+  "keywords": [
+    "TON",
+    "Blockchain",
+    "API"
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Yep-Wallet/yepwallet-websdk/issues"
+  },
+  "homepage": "https://github.com/Yep-Wallet/yepwallet-websdk#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yep-Wallet/yepwallet-websdk.git"
+  },
+  "dependencies": {
+    "bn.js": "4.11.6",
+    "ethjs-unit": "0.1.6",
+    "jssha": "^3.3.0",
+    "@ton/ton": "^15.0.0",
+    "tweetnacl": "1.0.3"
+  },
+  "devDependencies": {
+    "@sinonjs/fake-timers": "^9.1.1",
+    "@types/bn.js": "^5.1.0",
+    "buffer": "6.0.3",
+    "typescript": "^4.8.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "author": "luis"
+}
